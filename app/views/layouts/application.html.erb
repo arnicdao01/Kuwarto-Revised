@@ -1,0 +1,17 @@
+<%= render "partial/header.html.erb" %>
+  <!-- End #HEADER -->
+  <!-- Start #Content -->
+  <div id="main-container" class="container">
+    <div class="page-wrapper">
+      <div class="row">
+        <% flash.each do |message_type, message| %>
+          <div class="alert alert-<%= message_type %>"><%= message %></div>
+        <% end %>
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+  <!-- Start #FOOTER -->
+<%= render "partial/footer.html.erb" %>
+</body>
+</html>

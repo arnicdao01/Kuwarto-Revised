@@ -1,0 +1,36 @@
+<h3><center>Post your rentals now!</center></h3><hr>
+<div class="col-xs-6">
+     <h1>How it Works</h1>
+     <ul>
+       <li>Post your rentals for FREE.</li>
+       <li>Get unlimited inquiries</li>
+       <li>Showcase your rooms from others</li>
+       <li>Get some rental leads</li>
+       <li>Realtime messaging with customers</li>
+       <li>Reach worldwide audience</li>
+     </ul>
+</div>
+<div class="col-xs-6">
+      <h1>Register Now</h1>
+      <%= form_for(@user) do |f| %>
+            <%= render 'shared/error_messages' %>
+
+            <%= f.label :first_name %>
+            <%= f.text_field :first_name, class: 'form-control' %>
+
+            <%= f.label :last_name %>
+            <%= f.text_field :last_name, class: 'form-control' %>
+
+            <%= f.label :email %>
+            <%= f.email_field :email, class: 'form-control' %>
+
+            <%= f.label :password %>
+            <%= f.password_field :password,class: 'form-control' %>
+
+            <%= f.label :password_confirmation, "Confirmation" %>
+            <%= f.password_field :password_confirmation, class: 'form-control' %>
+            <input type="checkbox"><font size="3"> I agree with the terms & conditions and privacy statement.</font>
+
+            <%= f.submit "Create my account", class: "btn btn-primary" %>
+      <% end %>
+</div>
