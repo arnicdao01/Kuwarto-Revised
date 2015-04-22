@@ -116,3 +116,40 @@
 .log-in-wrapper > h2 {
   text-align: center;
 }
+
+/*Table Post*/
+.table-post {
+  vertical-align: top;
+  margin: 10px;
+  margin-left: 30px;
+}
+
+.table-post td {
+  padding: 5px;
+  vertical-align: initial;
+}
+
+.table-post select {
+  width: 200px;
+  padding: 5px;
+}
+
+#table-post-local input {
+  width: 500px;
+}
+
+#table-post-title input {
+  width: 850px;
+}
+
+#editor {
+  width: 850px;
+  max-height: 300px;
+  height: 300px;
+  border: 1px solid rgb(204,204,204);
+  padding: 4px;
+  box-shadow: rgba(0, 0, 0, 0.075) 0px 1px 1px 0px inset;
+  border-radius: 3px;
+  overflow: scroll;
+  outline: none;
+}

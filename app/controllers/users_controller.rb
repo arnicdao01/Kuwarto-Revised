@@ -4,6 +4,11 @@ class UsersController < ApplicationController
   before_action :admin_user, only: :destroy
 
   def show
+    unless logged_in?
+      store_location
+      flash[:danger] = "Please log in"
+      redirect_to login_url
+    end
     @user = User.find(params[:id])
   end
 
