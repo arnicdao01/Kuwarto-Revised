@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  village: MyString
+  unit_number: 1
+  floor: 1
+  barangay: MyString
+  floor_area: 1
+  furnishing: MyString
+  bedrooms: MyString
+  bathrooms: MyString
+  daily_rate: 9.99
+  weekly_rate: 9.99
+  monthly_rate: 9.99
+
+two:
+  title: MyString
+  description: MyText
+  village: MyString
+  unit_number: 1
+  floor: 1
+  barangay: MyString
+  floor_area: 1
+  furnishing: MyString
+  bedrooms: MyString
+  bathrooms: MyString
+  daily_rate: 9.99
+  weekly_rate: 9.99
+  monthly_rate: 9.99

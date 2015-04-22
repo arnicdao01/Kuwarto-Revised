@@ -1,149 +1,99 @@
 <h2>Add New Advertisement</h2>
+<%= form_for(@post) do |f| %>
 <div>
 	<div class="col-xs-6">
 		<h3>Basic Information</h3>
 		<hr>
-		<table cellpadding="5" cellspacing="5" class="table-post">
+		<table class="table-post">
 			<tbody>
 				<tr>
-					<td>Floor Area (in sqm.):</td>
-					<td><input type="text" placeholder="i.e. 20"></td>
+					<td><%= f.label :floor_area %></td>
+					<td><%= f.text_field :floor_area, placeholder: 'ie. 20' %></td>
 				</tr>
 				<tr>
-					<td>Furnishing:</td>
-					<td>
-						<select class="opt">
-							<option>--Choose one--</option>
-							<option>Fully Furnished</option>
-							<option>Semi Furnished</option>
-							<option>Unfurnished</option>
-						</select>
-					</td>
+					<td><%= f.label :furnishing %></td>
+					<td><%= f.select(:furnishing, options_for_select([['Fully Furnished', 'Fully Furnished'], ['Semi Furnished', 'Semi Furnished'], ['Unfurnished', 'Unfurnished']]), { include_blank: true }) %></td>
 				</tr>
 				<tr>
-					<td>Bedrooms:</td>
-					<td>
-						<select>
-							<option>Studio</option>
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-							<option>5</option>
-							<option>6</option>
-							<option>7</option>
-							<option>8</option>
-							<option>9</option>
-							<option>10</option>
-						</select>
-					</td>
+					<td><%= f.label :bedrooms %></td>
+					<td><%= f.select(:bedrooms, options_for_select([['Studio', 'Studio'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10']]), { include_blank: true }) %></td>
 				</tr>
 				<tr>
-					<td>Bathrooms:</td>
-					<td>
-						<select>
-							<option>none</option>
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-							<option>5</option>
-							<option>6</option>
-							<option>7</option>
-							<option>8</option>
-							<option>9</option>
-							<option>10</option>
-						</select>
-					</td>
+					<td><%= f.label :bathrooms %></td>
+					<td><%= f.select(:bathrooms, options_for_select([['None', 'Studio'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10']]), { include_blank: true }) %></td>
 				</tr>
 			</tbody>
 		</table>
 	</div>
+
+
 	<div class="col-xs-6">
 		<h3>Rental Rates</h3>
 		<hr>
-		<table cellpadding="5" cellspacing="5" class="table-post">
+		<table class="table-post">
 			<tbody>
 				<tr>
-					<td>Daily Rate:</td>
-					<td>Php<input type="text" placeholder="i.e. 2,000.00"></td>
+					<td><%= f.label :daily_rate %></td>
+					<td><%= f.text_field :daily_rate, placeholder: 'ie. 2,000' %></td>
 				</tr>
 				<tr>
-					<td>Weekly Rate:</td>
-					<td>Php<input type="text" placeholder="i.e. 5,000.00"></td>
+					<td><%= f.label :weekly_rate %></td>
+					<td><%= f.text_field :weekly_rate, placeholder: 'ie. 5,000' %></td>
 				</tr>
 				<tr>
-					<td>Monthly Rate:</td>
-					<td>Php<input type="text" placeholder="i.e. 12,000.00"></td>
+					<td><%= f.label :monthly_rate %></td>
+					<td><%= f.text_field :monthly_rate, placeholder: 'ie. 10,000' %></td>
 				</tr>
 			</tbody>
 		</table>
 	</div>
 
-	<div class="col-xs-12">
-	<h3>Location and Address</h3>
-	<hr>
-	<table cellpadding="5" cellspacing="5" id="table-post-local" class="table-post">
-		<tbody>
-			<tr>
-				<td>Name of Building or Village:</td>
-				<td><input type="text" placeholder="i.e. The Residences"></td>
-			</tr>
-			<tr>
-				<td>Unit Number or House Number:</td>
-				<td><input type="text" placeholder="i.e. 123"></td>
-			</tr>
-			<tr>
-				<td>Floor:</td>
-				<td><input type="text" placeholder="i.e. 12th"></td>
-			</tr>
-			<tr>
-				<td>Street, Neighborhood & Barangay:</td>
-				<td><input type="text" placeholder="i.e. Aquino St. Meralco Village"></td>
-			</tr>
-			<tr>
-				<td>City:</td>
-				<td>
-					<select>
-						<option>--Choose one--</option>
-						<option>1</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5</option>
-						<option>6</option>
-						<option>7</option>
-						<option>8</option>
-						<option>9</option>
-						<option>10</option>
-					</select>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-	</div>
 
 	<div class="col-xs-12">
-	<h3>Title and Description</h3>
-	<hr>
-	<table cellpadding="5" cellspacing="5" id="table-post-title" class="table-post">
-		<tbody>
-			<tr>
-				<td>Title:</td>
-				<td><input type="text" placeholder="i.e. Fully Furnished Two Bedrooms with Nice View of Sunset"></td>
-			</tr>
-			<tr>
-				<td>Description:</td>
-				<td>
-					<div><span>Tell us about the important details about your unit</span></div>
-					<div>
-						<div id="editor" contenteditable="true"></div>
-					</div>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-
-	<input type="submit" value="Proceed to Adding Photos" class="btn btn-primary" style="float: right; margin-right:170px; margin-top:50px;">
+		<h3>Location and Address</h3>
+		<hr>
+		<table class="table-post" id="table-post-local">
+			<tbody>
+				<tr>
+					<td><%= f.label "Name of Building or Village" %></td>
+					<td><%= f.text_field :village, placeholder: 'ie. The Residences' %></td>
+				</tr>
+				<tr>
+					<td><%= f.label "Unit Number or House Number" %></td>
+					<td><%= f.text_field :unit_number, placeholder: 'ie. 123' %></td>
+				</tr>
+				<tr>
+					<td><%= f.label :floor %></td>
+					<td><%= f.text_field :floor, placeholder: 'ie. 12th' %></td>
+				</tr>
+				<tr>
+					<td><%= f.label "Street, Neighborhood & Barangay" %></td>
+					<td><%= f.text_field :barangay, placeholder: 'ie. Aquino St. Meralco Village' %></td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
+
+
+	<div class="col-xs-12">
+		<h3>Title and Description</h3>
+		<hr>
+		<table class="table-post" id="table-post-title">
+			<tbody>
+				<tr>
+					<td><%= f.label :title %></td>
+					<td><%= f.text_field :title, placeholder: 'ie. Fully Furnished Two Bedrooms with Nice View of Sunset' %></td>
+				</tr>
+				<tr>
+					<td><%= f.label :description %></td>
+					<td>
+						<div><span>Tell us the important details about your unit</span></div>
+						<div><%= f.text_area :description, id:'editor' %></div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<%= f.submit "Proceed to Adding Photos", class: "btn btn-primary", id: "btn-add-post" %>
 </div>
+<% end %>

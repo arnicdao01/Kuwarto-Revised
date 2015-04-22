@@ -153,3 +153,9 @@
   overflow: scroll;
   outline: none;
 }
+
+#btn-add-post {
+  float: right;
+  margin-right:170px;
+  margin-top:50px;
+}

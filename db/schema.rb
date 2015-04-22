@@ -11,7 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150421034731) do
+ActiveRecord::Schema.define(version: 20150422070713) do
+
+  create_table "posts", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "village"
+    t.integer  "unit_number"
+    t.integer  "floor"
+    t.string   "barangay"
+    t.integer  "floor_area"
+    t.string   "furnishing"
+    t.string   "bedrooms"
+    t.string   "bathrooms"
+    t.decimal  "daily_rate"
+    t.decimal  "weekly_rate"
+    t.decimal  "monthly_rate"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "first_name"
@@ -20,11 +39,11 @@ ActiveRecord::Schema.define(version: 20150421034731) do
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
     t.string   "password_digest"
-    t.string   "remember_digest"
     t.boolean  "admin",             default: false
     t.string   "activation_digest"
     t.boolean  "activated",         default: false
     t.datetime "activated_at"
+    t.string   "remember_digest"
     t.string   "reset_digest"
     t.datetime "reset_sent_at"
   end
