@@ -159,3 +159,8 @@
   margin-right:170px;
   margin-top:50px;
 }
+
+.post-wrapper h3 {
+  background-color: #0066ff;
+  color: #ffffff;
+}
