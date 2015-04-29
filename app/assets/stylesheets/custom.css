@@ -41,7 +41,7 @@
   margin-bottom: 50px;
 }
 
-.featured-content .col-xs-4 > img {
+.featured-content .col-xs-4 > a > img {
   max-height: 330px;
   max-width: 330px;
   background-size: 100% 100%;
@@ -163,4 +163,18 @@
 .post-wrapper h3 {
   background-color: #0066ff;
   color: #ffffff;
+}
+
+
+/*Show Post*/
+.show-post-wrapper form {
+  border: 1px solid;
+  border-radius: 10px;
+}
+
+.show-post-wrapper img {
+  max-height: 100px;
+  max-width: 100px;
+  background-size: 100% 100%;
+  border: #000000 1px solid;
 }
