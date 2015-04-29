@@ -5,7 +5,7 @@
   padding-bottom: 60px;
 }
 
-#main-container img:hover
+#main-container .top-page img:hover
 {
     -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);
@@ -37,18 +37,18 @@
 
 /*Featured Content*/
 
-.featured-content .col-xs-4 {
+#featured-content .col-xs-4 {
   margin-bottom: 50px;
 }
 
-.featured-content .col-xs-4 > a > img {
+#featured-content .col-xs-4 > a > img {
   max-height: 330px;
   max-width: 330px;
   background-size: 100% 100%;
   border: #000000 1px solid;
 }
 
-.featured-content .col-xs-4 > img:hover {
+#featured-content .col-xs-4 > img:hover {
   border: red 1px solid;
 }
 
@@ -172,9 +172,10 @@
   border-radius: 10px;
 }
 
-.show-post-wrapper img {
-  max-height: 100px;
-  max-width: 100px;
-  background-size: 100% 100%;
-  border: #000000 1px solid;
+#slider .item img{
+    margin: 0 auto;
+    display: block;
+    width: auto;
+    max-height: 400px;
+    background-size: 100% 100%;
 }

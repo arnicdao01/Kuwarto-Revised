@@ -8,50 +8,17 @@
     </div>
   </div>
 </div>
-<div class="featured-content">
+<div id="featured-content" class="col-xs-12">
   <div><h1>Featured Rooms</h1></div>
-  <div class="col-xs-4">
-    <a href="/posts/16"><img src="/assets/bg-back.jpg"></a>
-    <div class="content-title">
-      <h4>Fully Furnished Room</h4>
-      <p>₱ 30,000</p>
+    <% @posts.order('created_at DESC').take(6).each do |post| %>
+    <div class="col-xs-4">
+      <a href="/posts/16"><img src="/assets/bg-back.jpg"></a>
+      <div class="content-title">
+        <h4><%= link_to post.title, post %></h4>
+         <p>₱<%= post.monthly_rate %></p>
+      </div>
     </div>
-  </div>
-  <div class="col-xs-4">
-    <a href="/posts/16"><img src="/assets/bg-back.jpg"></a>
-    <div class="content-title">
-      <h4>Fully Furnished Room</h4>
-      <p>₱ 30,000</p>
-    </div>
-  </div>
-  <div class="col-xs-4">
-    <a href="/posts/16"><img src="/assets/bg-back.jpg"></a>
-    <div class="content-title">
-      <h4>Fully Furnished Room</h4>
-      <p>₱ 30,000</p>
-    </div>
-  </div>
-  <div class="col-xs-4">
-    <a href="/posts/16"><img src="/assets/bg-back.jpg"></a>
-    <div class="content-title">
-      <h4>Fully Furnished Room</h4>
-      <p>₱ 30,000</p>
-    </div>
-  </div>
-  <div class="col-xs-4">
-    <a href="/posts/16"><img src="/assets/bg-back.jpg"></a>
-    <div class="content-title">
-      <h4>Fully Furnished Room</h4>
-      <p>₱ 30,000</p>
-    </div>
-  </div>
-  <div class="col-xs-4">
-    <a href="/posts/16"><img src="/assets/bg-back.jpg"></a>
-    <div class="content-title">
-      <h4>Fully Furnished Room</h4>
-      <p>₱ 30,000</p>
-    </div>
-  </div>
+  <% end %>
 </div>
 <div class="partners-wrapper">
   <div class="row">
