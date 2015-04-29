@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150424032811) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "post_attachments", force: :cascade do |t|
     t.integer  "post_id"
     t.string   "image"
@@ -55,6 +58,6 @@ ActiveRecord::Schema.define(version: 20150424032811) do
     t.datetime "reset_sent_at"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
 end
