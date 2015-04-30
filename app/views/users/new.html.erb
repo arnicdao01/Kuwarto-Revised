@@ -27,10 +27,10 @@
             <%= f.label :password %>
             <%= f.password_field :password,class: 'form-control' %>
 
-            <%= f.label :password_confirmation, "Confirmation" %>
+            <%= f.label :password_confirmation, "Password Confirmation" %>
             <%= f.password_field :password_confirmation, class: 'form-control' %>
-            <input type="checkbox"><font size="3"> I agree with the terms & conditions and privacy statement.</font>
-
-            <%= f.submit "Create my account", class: "btn btn-primary" %>
+           <font size="2"><i>By clicking Create Account, I agree to the <%= link_to "Terms of Service", terms_of_service_path %> and <%= link_to "Privacy Policy", privacy_policy_path %>.</i></font>
+           <br><br>
+            <%= f.submit "Create Account", class: "btn btn-primary" %>
       <% end %>
 </div>

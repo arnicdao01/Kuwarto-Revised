@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   post 'login', :to => 'sessions#create'
   get '/logout', :to => 'sessions#destroy'
 
+  get '/about', :to => 'pages#about'
+  get '/terms-of-service', :to => 'pages#terms'
+  get '/privacy-policy', :to => 'pages#privacy'
+
   resources :users
   resources :sessions
   resources :account_activations, only: [:edit]
