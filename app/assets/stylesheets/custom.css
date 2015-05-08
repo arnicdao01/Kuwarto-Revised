@@ -167,7 +167,7 @@
 
 
 /*Show Post*/
-.show-post-wrapper form {
+.show-post-wrapper .col-xs-4 > form {
   border: 1px solid;
   border-radius: 10px;
 }
@@ -176,8 +176,9 @@
     margin: 0 auto;
     display: block;
     width: auto;
-    max-height: 400px;
+    max-height: 500px;
     background-size: 100% 100%;
+    margin-bottom: 20px;
 }
 
 /*Center Layout*/

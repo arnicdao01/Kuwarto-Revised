@@ -4,6 +4,7 @@ class PostsController < ApplicationController
 	def show
 		@post = Post.find(params[:id])
 		@post_attachments = @post.post_attachments.all
+		@user = User.all
 	end
 
 	def new
