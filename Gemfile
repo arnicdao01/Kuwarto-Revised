@@ -17,6 +17,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'carrierwave'
+gem 'rails_12factor'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
